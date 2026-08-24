@@ -1,6 +1,6 @@
 services:
   qbit-discord-bot:
-    build: .
+    image: ghcr.io/urfatandihateu/qbit-discord-bot:1.0.0
     container_name: qbit-discord-bot
     restart: unless-stopped
     env_file:
