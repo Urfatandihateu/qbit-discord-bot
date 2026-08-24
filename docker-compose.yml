@@ -1,0 +1,13 @@
+services:
+  qbit-discord-bot:
+    build: .
+    container_name: qbit-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - QBIT_HOST=${QBIT_HOST}
+      - QBIT_USER=${QBIT_USER}
+      - QBIT_PASS=${QBIT_PASS}
+      - DISCORD_WEBHOOK=${DISCORD_WEBHOOK}
+      - POLL_INTERVAL=${POLL_INTERVAL:-12}
